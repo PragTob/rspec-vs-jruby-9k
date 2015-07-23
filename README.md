@@ -1,6 +1,17 @@
 # rspec + JRuby 9k on Tobi's machine = :'(
 
+(I figured it out... but weird, see the magic line)
+
 A minimal test repo to demonstrate issues experienced with rspec and jruby 9k.
+
+## The magic line
+
+The magic line:
+
+    -require 'spec/spec_helper'
+    +require 'spec_helper'
+
+No idea why the first one doesn't work anymore but it's same behavior as 2.2.2 so it 's probably golden. Must have missed that load behavior change :)
 
 ## Steps to reproduce
 
